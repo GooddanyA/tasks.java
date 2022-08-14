@@ -1,4 +1,4 @@
-package com.company.condit.Statement;
+package com.company.condit;
 
 import java.util.Scanner;
 /* think of chocolate as an N x M rectangle divided into little segments: N segments in length and M in width.
