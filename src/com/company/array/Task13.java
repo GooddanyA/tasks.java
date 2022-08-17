@@ -1,4 +1,4 @@
-package com.company;
+package com.company.array;
 
 import java.util.Scanner;
 /*Write a program that reads an array of int's and checks if the array is
