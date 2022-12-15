@@ -1,5 +1,6 @@
 package com.company.algoritmsHakerRank;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.SortedMap;
 import java.util.TreeMap;
@@ -38,6 +39,27 @@ public class LonelyInteger {
         }
 
         return tm;
+    }
+
+    public static List<Integer> gradingStudents(List<Integer> grades) {
+        boolean check;
+        List<Integer> grades2 = new ArrayList<>();
+        for (int i = 0; i < grades.size(); i++) {
+            check = false;
+            for (int k = 1; k < 3; k++) {
+                if ((grades.get(i) + k) % 5 == 0 && grades.get(i) >= 38) {
+                    grades2.add(grades.get(i) + k);
+                    check = true;
+                }
+            }
+            if(!check){
+
+                grades2.add(grades.get(i));
+            }
+
+        }
+        // Write your code here
+        return grades2;
     }
 
 }
