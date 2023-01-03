@@ -27,7 +27,7 @@ public class LonelyInteger {
         }
         return count;
     }
- /
+
     public static SortedMap<String, Integer> wordCount(String[] strings) {
         TreeMap<String, Integer> tm = new TreeMap();
         for (String str : strings) {
@@ -60,6 +60,28 @@ public class LonelyInteger {
         }
         // Write your code here
         return grades2;
+    }
+
+
+    public static int diagonalDifference(List<List<Integer>> arr) {
+        int count1 = 0;
+        int count2 = 0;
+        int i = 0;
+        Integer[][] arr3 = new Integer[(arr.size())][];
+        for (List<Integer> l: arr) {
+            arr3[i++] = l.toArray(new Integer[l.size()]);
+        }
+
+        int maxl = arr3.length-1;
+        for (int j = maxl; j >= 0; j--) {
+            count1 += arr3[j][j];
+        }
+        for (int k = maxl; k >= 0; k--) {
+            count2 += arr3[k][maxl - k];
+        }
+        return Math.abs(count1-count2);
+
+
     }
 
 }
